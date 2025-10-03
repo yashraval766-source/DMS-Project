@@ -28,7 +28,7 @@ Copy code
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/pragneshraval288-create/DMS-Project.git
+   git clone https://github.com/yashraval766-source/DMS-Project
 Navigate to the project folder:
 
 bash
