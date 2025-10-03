@@ -1,0 +1,30 @@
+<!-- frontend/templates/register.html -->
+{% extends "base.html" %}
+{% block content %}
+  <h2>Register</h2>
+  <form method="POST" action="{{ url_for('register') }}">
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.username.label }}<br>
+      {{ form.username(size=32) }}
+      {% for err in form.username.errors %}<div class="text-danger">{{ err }}</div>{% endfor %}
+    </div>
+    <div>
+      {{ form.password.label }}<br>
+      {{ form.password() }}
+      {% for err in form.password.errors %}<div class="text-danger">{{ err }}</div>{% endfor %}
+    </div>
+    <div>
+      {{ form.confirm_password.label }}<br>
+      {{ form.confirm_password() }}
+      {% for err in form.confirm_password.errors %}<div class="text-danger">{{ err }}</div>{% endfor %}
+    </div>
+    <div>
+      {{ form.role.label }}<br>
+      {{ form.role() }}
+    </div>
+    <div style="margin-top:8px;">
+      {{ form.submit() }}
+    </div>
+  </form>
+{% endblock %}
